@@ -24,5 +24,16 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	UPROPERTY(EditAnywhere)
+	FVector LiikeOFfsetti;
+
+	UPROPERTY(EditAnywhere)
+	float LiikeAika = 4.0f;
+	
+
+	UPROPERTY(EditAnywhere)
+	bool Liikkua = false;
+
+	FVector AloitusPaikka;
+	FVector KohdePaikka;
 };
