@@ -54,12 +54,23 @@ void ULiikuttaja::TickComponent(float DeltaTime, ELevelTick TickType, FActorComp
 
 	FVector NykyinenPaikka = GetOwner()->GetActorLocation();
 
-	float Nopeus = LiikeOFfsetti.Length() / LiikeAika;
+	KohdeSaavutettu = NykyinenPaikka.Equals(KohdePaikka);
 
-	FVector UusiPaikka = FMath::VInterpConstantTo(NykyinenPaikka, KohdePaikka, DeltaTime, Nopeus);
+	if(!KohdeSaavutettu)
+	{
+
+		float Nopeus = LiikeOFfsetti.Length() / LiikeAika;
+
+		FVector UusiPaikka = FMath::VInterpConstantTo(NykyinenPaikka, KohdePaikka, DeltaTime, Nopeus);
 
 
-	GetOwner()->SetActorLocation(UusiPaikka);
+		GetOwner()->SetActorLocation(UusiPaikka);
+
+
+
+	}
+
+	
 
 
 

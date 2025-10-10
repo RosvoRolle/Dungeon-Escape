@@ -34,6 +34,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool Liikkua = false;
 
+
+	UPROPERTY(VisibleAnywhere)
+	bool KohdeSaavutettu = false;
+
 	FVector AloitusPaikka;
 	FVector KohdePaikka;
 };
