@@ -30,4 +30,5 @@ void UTriggeriComp::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 
+
 }
